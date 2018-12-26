@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  web:
+    build: ./web
+    environment:
+        - APACHE_RUN_USER=www-data
+    volumes:
+        - ./socket:/var/www/html/
+    ports:
+        - 8000:80
+    working_dir: /var/www/html/
+  composer:
+    image: composer:1.6
+    volumes:
+        - ./socket:/var/www/html/
+    working_dir: /var/www/html/
+    command: composer install

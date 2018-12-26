@@ -1,0 +1,20 @@
+body,
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    border: 2px solid cadetblue;
+    padding: 20px
+}
+
+.col-count {
+    text-align: center;
+    display: flex;
+    justify-content: center
+}
+
+.result {
+    padding-left: 20px;
+}
